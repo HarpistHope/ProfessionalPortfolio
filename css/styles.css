@@ -1,0 +1,210 @@
+:root {
+    --bg-color: #1a102f;       /* Deep space/purple background */
+    --card-bg: #2d1b4e;        /* Dark purple card surface */
+    --text-main: #f8fafc;      /* Crisp white primary text */
+    --text-muted: #cbd5e1;     /* Soft lavender-gray secondary text */
+    --accent-color: #00ffff;   /* Vivid neon cyan */
+    --accent-hover: #38bdf8;   /* Soft cyan glow on hover */
+    --border-color: #4c3575;   /* Rich purple-indigo border */
+    --max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 3rem 1rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Header - Deep Purple card with a vibrant Cyan top border */
+header {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.4rem;
+    color: var(--text-main);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+header p {
+    color: var(--text-muted);
+    max-width: 750px;
+    margin-bottom: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 0.75rem;
+    color: var(--text-main);
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 255, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: #1f1235;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.04);
+}
+
+.card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text-main);
+}
+
+.card p {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.tag {
+    background-color: #1f1235;
+    color: var(--accent-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    border: 1px solid #4c3575;
+}
+
+.card-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+    h1 { font-size: 1.8rem; }
+    body { padding: 1rem; }
+    header { padding: 1.5rem; }
+}
+
+/* Resume page & Download bar rules */
+.resume-section { margin-bottom: 2.5rem; }
+.resume-item { margin-bottom: 1.5rem; }
+.resume-header-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.resume-item h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-main); }
+.resume-date { font-size: 0.85rem; color: var(--accent-color); font-weight: 500; }
+.resume-company { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 0.3rem; }
+ul { padding-left: 1.25rem; margin-top: 0.4rem; }
+li { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.download-bar { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
