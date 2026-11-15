@@ -4,195 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope McBride | GIS Developer & Cartographer</title>
-    <!-- Google Fonts for clean academic/professional typography -->
+    <meta name="description" content="Portfolio of Hope McBride: web mapping applications, award-winning cartographic design, and GIS data work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Link to external stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <div class="container">
-        <!-- Header / Bio Section -->
-        <header>
-            <h1>Hope McBride</h1>
-            <p class="subtitle">GIS Developer & Cartographer | M.S. Cartography & GIS</p>
-            <p>Welcome to my professional portfolio. I specialize in building mobile-first web mapping applications, interactive data dashboards, and precision cartographic layouts that bridge spatial data science with real-world accessibility and utility.</p>
-            <div class="nav-links">
-                <a href="#web-apps">Web Apps & GIS</a>
-                <a href="#cartography">Cartography</a>
-                <a href="resume.html">Resume / CV</a>
-                <a href="https://www.linkedin.com/in/hope-m-151a5a242" target="_blank">LinkedIn</a>
+
+        <!-- Hero / About -->
+        <header class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">GIS Developer &amp; Cartographer</p>
+                <h1>Hope McBride</h1>
+                <p class="hero-lead">I build maps and web apps that help people find what they need, in the language they need it.</p>
+                <p>I came to cartography from clinical healthcare, where my job was explaining complex information clearly to people who needed it right away. At UW&ndash;Madison I turned that habit toward maps: award-winning print design, mobile-first web apps, and the careful data work underneath both. I now live and teach in Hokkaido, Japan, which is where my capstone project began.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#featured">See my capstone</a>
+                    <a class="btn" href="resume.html">Resume / CV</a>
+                    <a class="btn" href="https://www.linkedin.com/in/hope-m-151a5a242" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
+            <ul class="stats" aria-label="Portfolio at a glance">
+                <li><strong>6</strong><span>web maps &amp; apps</span></li>
+                <li><strong>4</strong><span>designed print maps</span></li>
+                <li><strong>2</strong><span>map design awards</span></li>
+                <li><strong>EN / 日本語</strong><span>bilingual work</span></li>
+            </ul>
         </header>
 
-        <!-- Section 1: Advanced Web GIS & Capstone -->
-        <section id="web-apps">
-            <h2>Web GIS & Capstone Projects</h2>
-            <div class="project-grid">
-                
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/foreignhokkaido-thumb.png" alt="ForeignHokkaido Preview">
-                    </div>
-                    <div>
-                        <h3>ForeignHokkaido</h3>
-                        <p>Mobile-first, bilingual web map application centralizing municipal logistics, health services, and seasonal rules for Assistant Language Teachers in southern Hokkaido.</p>
-                    </div>
+        <nav class="subnav" aria-label="Sections">
+            <a href="#featured">Capstone</a>
+            <a href="#web-apps">Web Mapping</a>
+            <a href="#cartography">Cartography</a>
+            <a href="#practice">GIS in Practice</a>
+            <a href="#skills">Skills</a>
+        </nav>
+
+        <!-- Featured capstone -->
+        <section id="featured">
+            <h2>Capstone</h2>
+            <article class="feature">
+                <div class="feature-image">
+                    <img src="images/foreignhokkaido-feature.jpg" alt="ForeignHokkaido web map showing snow zones and services in Oshima and Hiyama, Hokkaido" loading="lazy">
+                </div>
+                <div class="feature-body">
+                    <p class="course">GEOG 778 &middot; Capstone</p>
+                    <h3>ForeignHokkaido</h3>
+                    <p class="lead">A free, bilingual, mobile-first map for Assistant Language Teachers in southwestern Hokkaido.</p>
+                    <p><strong>Purpose.</strong> New ALTs must find hospitals, shelters, garbage rules and winter hazards in a second language, across dozens of Japanese-only websites. This puts the answers on one English and Japanese map for all 18 municipalities of Oshima and Hiyama.</p>
+                    <p><strong>Method.</strong> Esri JavaScript SDK on GitHub Pages with ArcGIS Online hosted layers, SQL and Arcade queries, a nearest-three lookup, winter and summer modes, and Survey123 community layers. Tested with a group of ALTs.</p>
                     <div class="card-footer">
                         <span class="tag">Esri JS SDK</span>
-                        <a href="https://harpisthope.github.io/GEOG_778/" target="_blank" class="card-link">View Project &rarr;</a>
+                        <span class="tag">Survey123</span>
+                        <span class="tag">Arcade</span>
+                        <a href="https://harpisthope.github.io/GEOG_778/" target="_blank" rel="noopener" class="card-link">Open the live map &rarr;</a>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/pugetsoundwatch.png" alt="PugetSoundWatch Preview">
-                    </div>
-                    <div>
-                        <h3>PugetSoundWatch</h3>
-                        <p>Full-stack web application tracking crowdsourced wildlife and whale-watching activity to promote environmental stewardship and regional ecotourism.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="tag">Full-Stack GIS</span>
-                        <a href="https://harpisthope.github.io/g576_final/" target="_blank" class="card-link">Launch App &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/godivepure.png" alt="GoDivePure Preview">
-                    </div>
-                    <div>
-                        <h3>GoDivePure</h3>
-                        <p>Interactive mapping tool for exploring Great Lakes dive sites and logging real-time dive events and underwater conditions with custom spatial forms.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="tag">AGOL REST API</span>
-                        <a href="https://harpisthope.github.io/midterm_g576/" target="_blank" class="card-link">Launch App &rarr;</a>
-                    </div>
-                </div>
-
-            </div>
+            </article>
         </section>
 
-        <!-- Section 2: Interactive Web Mapping & Data Vis -->
-        <section>
-            <h2>Interactive Web Mapping & D3</h2>
+        <!-- Web mapping progression -->
+        <section id="web-apps">
+            <h2>Web Mapping &amp; Applications</h2>
+            <p class="section-intro">Five projects in the order I built them, from a first Leaflet map to a team-built museum-style exhibit and a serverless full-stack app.</p>
             <div class="project-grid">
-                
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/astrojourneys.png" alt="AstroJourneys Preview">
-                    </div>
-                    <div>
-                        <h3>AstroJourneys</h3>
-                        <p>Museum-quality digital experience exploring the spatiotemporal history and narrative milestones of the U.S. space program.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="tag">Team Project</span>
-                        <a href="https://harpisthope.github.io/2026_AstroJourneys/" target="_blank" class="card-link">Launch App &rarr;</a>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/usnaturalamenitiesscale.png" alt="U.S. Natural Amenities Scale Preview">
-                    </div>
+                <article class="card">
+                    <div class="card-image"><img src="images/passengercounttrends.jpg" alt="Passenger Count Trends interactive map" loading="lazy"></div>
                     <div>
-                        <h3>U.S. Natural Amenities Scale</h3>
-                        <p>Multivariate data visualization analyzing how historic natural amenities correlate with regional attractiveness across U.S. states.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="tag">D3.js</span>
-                        <a href="https://harpisthope.github.io/unit-3/" target="_blank" class="card-link">Launch App &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/passengercounttrends.png" alt="Passenger Count Trends Preview">
-                    </div>
-                    <div>
+                        <p class="course">GEOG 575 &middot; Lab 1</p>
                         <h3>Passenger Count Trends</h3>
-                        <p>Introductory interactive web map visualizing annual airport embarkation trends and passenger flow dynamics.</p>
+                        <p class="lead">My first interactive web map.</p>
+                        <p><strong>Purpose.</strong> Show annual passenger enplanements at 17 major U.S. cities from 2013 to 2023, and prompt questions about why air travel is rising and why some cities lead.</p>
+                        <p><strong>Method.</strong> Leaflet proportional symbol map of FAA data, with popups for each city and bar, line and radar charts of decade totals.</p>
                     </div>
                     <div class="card-footer">
                         <span class="tag">Leaflet.js</span>
-                        <a href="https://harpisthope.github.io/unit-2/" target="_blank" class="card-link">Launch App &rarr;</a>
+                        <a href="https://harpisthope.github.io/unit-2/" target="_blank" rel="noopener" class="card-link">Open the map &rarr;</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image"><img src="images/usnaturalamenitiesscale.jpg" alt="U.S. Natural Amenities Scale multivariate visualization" loading="lazy"></div>
+                    <div>
+                        <p class="course">GEOG 575 &middot; Lab 2</p>
+                        <h3>U.S. Natural Amenities Scale</h3>
+                        <p class="lead">A choropleth map linked to a bubble chart, in D3.</p>
+                        <p><strong>Purpose.</strong> Let people compare natural amenities (climate, sunlight, terrain, water) across U.S. states and explore how those factors relate to each other.</p>
+                        <p><strong>Method.</strong> Aggregated USDA county-level data to state averages, classified it with CKMeans, and built coordinated views with D3.js and TopoJSON.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">D3.js</span>
+                        <a href="https://harpisthope.github.io/unit-3/" target="_blank" rel="noopener" class="card-link">Open the visualization &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image"><img src="images/astrojourneys.jpg" alt="AstroJourneys interactive story of the U.S. space program" loading="lazy"></div>
+                    <div>
+                        <p class="course">GEOG 575 &middot; Team Final</p>
+                        <h3>AstroJourneys</h3>
+                        <p class="lead">A museum-style interactive about the U.S. space program.</p>
+                        <p><strong>Purpose.</strong> A kiosk-style exhibit that takes visitors from the first crewed flights to Artemis, with a timeline, map and a distance-from-Earth graphic.</p>
+                        <p><strong>Method.</strong> Four-person team; we shared the research, narrative writing, code, mapping and app development, collaborating through GitHub.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">Team project</span>
+                        <a href="https://harpisthope.github.io/2026_AstroJourneys/" target="_blank" rel="noopener" class="card-link">Open the experience &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image"><img src="images/godivepure.jpg" alt="GoDivePure map of Great Lakes dive sites" loading="lazy"></div>
+                    <div>
+                        <p class="course">GEOG 576 &middot; Midterm</p>
+                        <h3>GoDivePure</h3>
+                        <p class="lead">A hub for Michigan's Great Lakes divers.</p>
+                        <p><strong>Purpose.</strong> Bring scattered dive information into one map: shipwrecks, preserves, bathymetry and crowdsourced sites and events. The name nods to the Pure Michigan campaign.</p>
+                        <p><strong>Method.</strong> Esri JavaScript SDK with a custom control panel that filters sites by depth and difficulty, plus ArcGIS Online survey forms to log new sites and events.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">Esri JS &amp; AGOL</span>
+                        <a href="https://harpisthope.github.io/midterm_g576/" target="_blank" rel="noopener" class="card-link">Open the app &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image"><img src="images/pugetsoundwatch.jpg" alt="PugetSoundWatch whale and wildlife sighting map" loading="lazy"></div>
+                    <div>
+                        <p class="course">GEOG 576 &middot; Final</p>
+                        <h3>PugetSoundWatch</h3>
+                        <p class="lead">A serverless, mobile-first app for whale and wildlife watching.</p>
+                        <p><strong>Purpose.</strong> Go beyond a static sightings log by combining crowdsourced reports with viewing points, ferry routes and stranding-response contacts, to support stewardship in the Puget Sound.</p>
+                        <p><strong>Method.</strong> ArcGIS Maps SDK on GitHub Pages with hosted layers, Survey123 reporting, an Editor widget and spatial queries by Puget Sound Action Area.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">Full-stack GIS</span>
+                        <a href="https://harpisthope.github.io/g576_final/" target="_blank" rel="noopener" class="card-link">Open the app &rarr;</a>
+                    </div>
+                </article>
+
 
             </div>
         </section>
 
-        <!-- Section 3: Static Cartography -->
+        <!-- Cartography -->
         <section id="cartography">
-            <h2>Cartographic Design & Print Maps</h2>
+            <h2>Cartographic Design</h2>
+            <p class="section-intro">Print maps from GEOG 370, where I learned layout, typography, generalization and making a visual argument.</p>
+
+            <article class="feature feature-award">
+                <div class="feature-image">
+                    <img src="images/unchartedwaters-feature.jpg" alt="Uncharted Waters map poster on the history of seafloor mapping" loading="lazy">
+                </div>
+                <div class="feature-body">
+                    <p class="course">GEOG 370 &middot; Final</p>
+                    <h3>Uncharted Waters: An Exploration of Progress in Seafloor Mapping</h3>
+                    <p class="awards">
+                        <span class="badge">1st place &middot; Barbara Bartz Petchenik Memorial Award in Cartographic Design, UW&ndash;Madison Geography</span>
+                        <span class="badge">Runner-up &middot; 2026 Wisconsin Land Information Association Map Contest</span>
+                    </p>
+                    <p><strong>Purpose.</strong> An informational poster on the history of seafloor mapping, exploration and hydrography, a topic I chose to show my interest in explanatory map posters.</p>
+                    <p><strong>Method.</strong> A showcase of everything from the course: poster layout, typography, generalization and the full ArcGIS Pro and Adobe Illustrator workflow.</p>
+                    <div class="card-footer">
+                        <span class="tag">ArcGIS Pro</span>
+                        <span class="tag">Adobe Illustrator</span>
+                        <a href="pdfs/unchartedwaters.pdf" target="_blank" rel="noopener" class="card-link">View the poster (PDF) &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
             <div class="project-grid">
-                
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/unchartedwaters.png" alt="Uncharted Waters Poster">
-                    </div>
-                    <div>
-                        <h3>Uncharted Waters</h3>
-                        <p>Informational map poster tracking the historical evolution and hydrographic progression of seafloor mapping. (Award Winner)</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="tag">Award Winner</span>
-                        <a href="pdfs/unchartedwaters.pdf" target="_blank" class="card-link">View PDF &rarr;</a>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/itselectric.png" alt="It's Electric Map Preview">
-                    </div>
+                <article class="card">
+                    <div class="card-image"><img src="images/itselectric.jpg" alt="It's Electric classed choropleth map" loading="lazy"></div>
                     <div>
-                        <h3>It’s Electric Map</h3>
-                        <p>Classed choropleth map delivering a convincing statistical graphic argument across 15+ enumeration units.</p>
+                        <p class="course">GEOG 370 &middot; Lab 3</p>
+                        <h3>It&rsquo;s Electric</h3>
+                        <p class="lead">Who is driving electric? A thematic map built to make an argument.</p>
+                        <p><strong>Purpose.</strong> Show how unevenly registered all-electric vehicles are spread across U.S. states in 2023, with callouts on California, the Midwest, Mississippi and Maryland.</p>
+                        <p><strong>Method.</strong> A five-class choropleth of vehicles per 5,000 people (so population size doesn&rsquo;t distort the picture), in an Albers equal-area projection, finished in Illustrator.</p>
                     </div>
                     <div class="card-footer">
                         <span class="tag">ArcGIS Pro</span>
-                        <a href="pdfs/itselectric.pdf" target="_blank" class="card-link">View PDF &rarr;</a>
+                        <a href="pdfs/itselectric.pdf" target="_blank" rel="noopener" class="card-link">View the map (PDF) &rarr;</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/africamapposter.png" alt="Africa Map Preview">
-                    </div>
+                <article class="card">
+                    <div class="card-image"><img src="images/africamapposter.jpg" alt="Africa physical geography reference map" loading="lazy"></div>
                     <div>
+                        <p class="course">GEOG 370 &middot; Lab 2</p>
                         <h3>Africa Reference Map</h3>
-                        <p>Detailed physical geography reference map developing label placement skills across 171 distinct geographic features.</p>
+                        <p class="lead">Label placement at scale.</p>
+                        <p><strong>Purpose.</strong> Practice the look and placement of 171 physical geography labels and the generalization behind a clean reference map.</p>
+                        <p><strong>Method.</strong> ArcGIS Pro for the map and Adobe Illustrator for final typography and layout.</p>
                     </div>
                     <div class="card-footer">
-                        <span class="tag">Cartographic Design</span>
-                        <a href="pdfs/africamapposter.pdf" target="_blank" class="card-link">View PDF &rarr;</a>
+                        <span class="tag">Illustrator</span>
+                        <a href="pdfs/africamapposter.pdf" target="_blank" rel="noopener" class="card-link">View the map (PDF) &rarr;</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/oregonmapposter.png" alt="Oregon Map Preview">
-                    </div>
+                <article class="card">
+                    <div class="card-image"><img src="images/oregonmapposter.jpg" alt="Oregon regional map" loading="lazy"></div>
                     <div>
+                        <p class="course">GEOG 370 &middot; Lab 1</p>
                         <h3>Oregon Regional Map</h3>
-                        <p>Foundational static regional map utilizing a custom regional color palette inspired by Pacific Northwest landscapes.</p>
+                        <p class="lead">My first static map, about a place I know.</p>
+                        <p><strong>Purpose.</strong> Introduce Oregon, where I used to live in Bend, to a new audience in Wisconsin.</p>
+                        <p><strong>Method.</strong> A custom palette: Oregon Ducks colors for the inset, and greens, purples and browns in the main map for Portland, the woods and the outdoors.</p>
                     </div>
                     <div class="card-footer">
                         <span class="tag">ArcGIS Pro</span>
-                        <a href="pdfs/oregonmapposter.pdf" target="_blank" class="card-link">View PDF &rarr;</a>
+                        <a href="pdfs/oregonmapposter.pdf" target="_blank" rel="noopener" class="card-link">View the map (PDF) &rarr;</a>
                     </div>
-                </div>
+                </article>
 
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Professional GIS work -->
+        <section id="practice">
+            <h2>GIS in Practice</h2>
+            <p class="section-intro">The data work behind the maps, done for real organizations.</p>
+            <div class="project-grid two-up">
+
+                <article class="card card-text">
+                    <div>
+                        <p class="course">Wisconsin State Cartographer&rsquo;s Office &middot; Apr&ndash;Oct 2026</p>
+                        <h3>Georeferencing Historical Right-of-Way Plats</h3>
+                        <p><strong>Purpose.</strong> Make historical Wisconsin Department of Transportation right-of-way plats usable as spatial data.</p>
+                        <p><strong>Method.</strong> Georeferenced the plats in ArcGIS Pro in collaboration with WisDOT.</p>
+                    </div>
+                    <div class="card-footer"><span class="tag">Georeferencing</span><span class="tag">ArcGIS Pro</span></div>
+                </article>
+
+                <article class="card card-text">
+                    <div>
+                        <p class="course">Arthur H. Robinson Map Library &middot; Jan&ndash;May 2026</p>
+                        <h3>Geospatial Data Cataloging &amp; Metadata</h3>
+                        <p><strong>Purpose.</strong> Keep the library&rsquo;s annual intake of geospatial datasets findable for regional research.</p>
+                        <p><strong>Method.</strong> Cataloged datasets across 72 Wisconsin counties and published ISO-compliant metadata.</p>
+                    </div>
+                    <div class="card-footer"><span class="tag">ISO metadata</span><span class="tag">Data management</span></div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills &amp; Tools</h2>
+            <p class="section-intro">UW&ndash;Madison M.S. in Cartography &amp; GIS coursework: GEOG 370, 377, 378, 574, 575, 576, 579 and 778, including spatial database design and SQL in pgAdmin 4.</p>
+            <div class="skills">
+                <div><h3>Web mapping</h3><p class="chips"><span>Esri JavaScript SDK</span><span>Leaflet</span><span>D3.js</span><span>ArcGIS Online</span><span>Survey123</span><span>HTML / CSS / JavaScript</span></p></div>
+                <div><h3>GIS &amp; data</h3><p class="chips"><span>ArcGIS Pro</span><span>Spatial analysis</span><span>Georeferencing</span><span>ISO metadata</span><span>SQL &amp; pgAdmin4</span><span>Python</span></p></div>
+                <div><h3>Design</h3><p class="chips"><span>Cartographic design</span><span>Adobe Illustrator</span><span>Mobile-first UI</span><span>Bilingual (EN / 日本語) interfaces</span></p></div>
+            </div>
+        </section>
+
         <footer>
+            <p><a href="resume.html">Resume / CV</a> &middot; <a href="https://www.linkedin.com/in/hope-m-151a5a242" target="_blank" rel="noopener">LinkedIn</a></p>
             <p>&copy; 2026 Hope McBride. Built for GitHub Pages.</p>
         </footer>
     </div>
